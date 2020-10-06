@@ -1,0 +1,70 @@
+// Small devices 576px and up
+@include media-breakpoint-up(sm) {
+}
+// Medium devices 768px and up
+@include media-breakpoint-up(md) {
+  .character-image {
+    clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+  }
+  .character-name {
+    position: relative;
+    overflow: hidden;
+    right: 30%;
+    width: 130%;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .character-description {
+    height: 150px;
+  }
+  .wiki-link {
+    font-size: 1.2rem;
+    &:hover {
+      opacity: 0.7;
+      --ogFS: 1.2rem;
+      --newFS: calc(var(--ogFS) * 1.1);
+      font-size: var(--newFS);
+    }
+  }
+}
+// Large devices 992px and up
+@include media-breakpoint-up(lg) {
+  .character-name {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .character-description {
+    height: 220px;
+  }
+  .wiki-link {
+    font-size: 1.75rem;
+    &:hover {
+      opacity: 0.7;
+      --ogFS: 1.75rem;
+      --newFS: calc(var(--ogFS) * 1.1);
+      font-size: var(--newFS);
+    }
+  }
+}
+// Extra large devices 1200px and up
+@include media-breakpoint-up(xl) {
+  .character-name {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .character-description {
+    height: 220px;
+  }
+  .wiki-link {
+    font-size: 2rem;
+    &:hover {
+      opacity: 0.7;
+      --ogFS: 2rem;
+      --newFS: calc(var(--ogFS) * 1.1);
+      font-size: var(--newFS);
+    }
+  }
+}

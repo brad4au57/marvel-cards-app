@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import "./styles/App.scss";
+import Character from "./components/Character";
+import CharPicker from "./components/CharPicker";
 
 function App() {
+  const [charSelection, setCharSelection] = useState(
+    "http://gateway.marvel.com/v1/public/characters/1017574"
+  );
+
+  const charSelectionHandler = (e) => {
+    setCharSelection(e);
+    console.log("URI from App: " + e);
+    console.log("Event passed to App...");
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CharPicker
+        characterURI={charSelection}
+        onCharSelect={charSelectionHandler}
+      />
+      <Character characterURI={charSelection} />
     </div>
   );
 }

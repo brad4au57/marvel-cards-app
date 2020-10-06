@@ -1,0 +1,84 @@
+@import "./custom.scss";
+
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap");
+// Font Variables
+$Bangers: "Bangers", cursive;
+$OpenSans: "Open Sans", sans-serif;
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #c31432; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #240b36,
+    #c31432
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #240b36,
+    #c31432
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.loading-error {
+  color: white;
+}
+
+.loading-text {
+  color: white;
+}
+/***
+ *** Character Selection Dropdown Styling 
+ ***/
+.btn-char-custom {
+  background: #dfe6e9; /* fallback for old browsers */
+  font-family: $Bangers;
+  -webkit-box-shadow: 10px 10px 30px 15px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 10px 10px 30px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 30px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*** 
+ *** Character Card Styling 
+ ***/
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+  -webkit-box-shadow: 10px 10px 30px 15px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 10px 10px 30px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 30px 15px rgba(0, 0, 0, 0.3);
+}
+
+.character-name {
+  font-family: $Bangers;
+  text-shadow: -1px 2px 8px rgba(255, 255, 255, 1);
+}
+
+.character-description {
+  text-shadow: -1px 2px 8px rgba(255, 255, 255, 1);
+  font-family: $OpenSans;
+}
+
+.wiki-link {
+  font-family: $OpenSans;
+  font-style: italic;
+  background: #c21500; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #ffc500,
+    #c21500
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #ffc500,
+    #c21500
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@import "./responsive.scss";
