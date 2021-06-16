@@ -11,8 +11,6 @@ function App() {
 
   const charSelectionHandler = (e) => {
     setCharSelection(e);
-    console.log("URI from App: " + e);
-    console.log("Event passed to App...");
   };
 
   return (
