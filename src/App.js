@@ -6,7 +6,7 @@ import CharPicker from "./components/CharPicker";
 
 function App() {
   const [charSelection, setCharSelection] = useState(
-    "https://gateway.marvel.com/v1/public/characters/1017574"
+    "http://gateway.marvel.com/v1/public/characters/1017574"
   );
 
   const charSelectionHandler = (e) => {

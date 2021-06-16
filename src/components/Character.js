@@ -10,7 +10,9 @@ export default function Character(props) {
   useEffect(() => {
     function fetchData() {
       setIsLoaded(false);
-      fetch(characterURL(props.characterURI))
+      let httpsCharacterURI = "https" + props.characterURI.substring(4);
+      console.log(`Converted URI to:${httpsCharacterURI}`);
+      fetch(characterURL(httpsCharacterURI))
         .then((res) => res.json())
         .then(
           (response) => {
