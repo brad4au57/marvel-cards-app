@@ -39,10 +39,6 @@ export default function Character(props) {
     fetchData();
   }, [props.characterURI]);
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-
   if (error) {
     return (
       <div className="loading-error mt-5 text-center display-1">
